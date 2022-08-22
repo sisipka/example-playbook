@@ -2,10 +2,6 @@
 - name: Install Nano
   hosts: all
   tasks:
-    - name: Install Nano
-      package:
-        name: nano
-        state: present
     - name: CURL simple download file
       uri:
         url: https://www.dmosk.ru/files/winsetupfromusb.zip
