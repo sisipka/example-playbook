@@ -2,7 +2,7 @@
 - name: Install Nano
   hosts: all
   tasks:
-    - name: Install NTP-client
+    - name: Install Nano
       package:
-        name: chrony
+        name: nano
         state: present
