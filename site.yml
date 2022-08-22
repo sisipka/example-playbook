@@ -1,17 +1,10 @@
 ---
 - name: Install Nginx
   hosts: all
-  handlers:
-    - name: start-nginx
-      become: true
-      command: nginx
-    - name: reload-nginx
-      become: true
-      command: nginx -s reload
   tasks:
-    - name: Install NGINX
+    - name: Install Nana
       become: true
       ansible.builtin.yum:
-        name: nginx
+        name: nano
         state: present
-      notify: start-nginx
+      
