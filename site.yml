@@ -3,7 +3,6 @@
   hosts: all
   tasks:
     - name: Install Nano
-      become: true
       package:
         name: nano
         state: present
