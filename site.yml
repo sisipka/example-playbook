@@ -9,11 +9,6 @@
       become: true
       command: nginx -s reload
   tasks:
-    - name: Install epel-release
-      become: true
-      ansible.builtin.yum:
-        name: epel-release.noarch
-        state: latest
     - name: Install NGINX
       become: true
       ansible.builtin.yum:
