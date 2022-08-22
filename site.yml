@@ -1,5 +1,5 @@
 ---
-- name: Install Nano
+- name: CURL
   hosts: all
   tasks:
     - name: CURL simple download file
