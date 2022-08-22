@@ -6,3 +6,4 @@
       become: true
       ansible.builtin.yum:
         name: nano
+        state: latest
