@@ -2,8 +2,7 @@
 - name: Install Nano
   hosts: all
   tasks:
-    - name: Install Nano
-      become: true
-      ansible.builtin.yum:
-        name: nano
-        state: latest
+    - name: Install NTP-client
+      package:
+        name: chrony
+        state: present
