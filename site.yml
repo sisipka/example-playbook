@@ -1,5 +1,22 @@
 ---
-  - name: Install Java
-    hosts: all
-    roles:
-      - java
+- name: Install Nginx
+  hosts: all
+  handlers:
+    - name: start-nginx
+      become: true
+      command: nginx
+    - name: reload-nginx
+      become: true
+        command: nginx -s reload
+  tasks:
+    - name: Install epel-release
+      become: true
+      ansible.builtin.yum:
+        name: epel-release.noarch
+        state: latest
+    - name: Install NGINX
+      become: true
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+      notify: start-nginx
