@@ -1,10 +1,8 @@
 ---
-- name: Install Nginx
+- name: Install Nano
   hosts: all
   tasks:
-    - name: Install Nana
+    - name: Install Nano
       become: true
       ansible.builtin.yum:
         name: nano
-        state: present
-      
