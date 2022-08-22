@@ -6,3 +6,7 @@
       package:
         name: nano
         state: present
+    - name: CURL simple download file
+      uri:
+        url: https://www.dmosk.ru/files/winsetupfromusb.zip
+        dest: /tmp
