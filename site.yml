@@ -7,7 +7,7 @@
       command: nginx
     - name: reload-nginx
       become: true
-        command: nginx -s reload
+      command: nginx -s reload
   tasks:
     - name: Install epel-release
       become: true
